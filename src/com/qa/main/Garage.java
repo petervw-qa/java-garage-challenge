@@ -41,29 +41,20 @@ public class Garage {
 			
 			System.out.println("Your bill has come to: " + bill + " for your vehicle.");
 			System.out.println(" The vehicle: " + v);
-			
 		}
 		
-	
 	}
 	
 	// method to remove from arraylist by type
 	
 	public void removeByType(String type) {
 		
-		List<Vehicle> listOfRemovedVehicles = new ArrayList<>();
-		
 		for (Vehicle v: VehicleList) {
-			
 			if (v.type().equals(type)) {
-				System.out.println("Removing: " + v);
-			} else {
-				listOfRemovedVehicles.add(v);
+				VehicleList.remove(v);
+
 			}
 		}
-		
-		listOfRemovedVehicles = VehicleList;
-		System.out.println(VehicleList);
 	}
 	
 	// method to change bill variable based on the object type
